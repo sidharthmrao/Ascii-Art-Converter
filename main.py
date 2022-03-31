@@ -1,10 +1,10 @@
 import cv2
 
-image = "07CAT-STRIPES-mediumSquareAt3X-v2.jpg"
+image = "RickAstley2021.jpg"
 
 img = cv2.imread(f"./{image}")
 
-scale_percent = 10 # percent of original size
+scale_percent = 3 # percent of original size
 width = int(img.shape[1] * scale_percent / 100)
 height = int(img.shape[0] * scale_percent / 100)
 dim = (width, height)
@@ -26,9 +26,9 @@ for i in range(len(blackAndWhiteImage)):
     ascii_shape.append("")
     for j, val in enumerate(blackAndWhiteImage[i]):
         if val == 255:
-            ascii_shape[i] += "-" # "- "
+            ascii_shape[i] += "- " # "- "
         else:
-            ascii_shape[i] += "+" # "+ "
+            ascii_shape[i] += "+ " # "+ "
     ascii_shape[i] += "\n"
 
 print(ascii_shape)
